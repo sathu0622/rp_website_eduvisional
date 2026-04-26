@@ -17,7 +17,7 @@ export const TEAM_MEMBERS = [
 
   { name: "Sathushan T", role: "Component 2 – Smart Summarization Engine", email: "sathushan622@gmail.com", initials: "M2", photo: member4Photo },
   { name: "Abishaan T", role: "Component 3 – Braille Exam Correction", email: "abishaan.thiyagalingam@gmail.com", initials: "M3", photo: member2Photo },
-  { name: "Dolawattage K. J", role: "Component 4 – Voice QA Tutoring System", email: "member4@example.com", initials: "M4", photo: member3Photo },
+  { name: "Dolawattage K. J", role: "Component 4 – Voice QA Tutoring System", email: "kavindyadolawatta@gmail.com", initials: "M4", photo: member3Photo },
   { name: "Senevirathna B.M.P.C", role: "Component 1 – Multisensory Storytelling", email: "pcsplus23@gmail.com", initials: "M1", photo: member1Photo },
 ];
 
