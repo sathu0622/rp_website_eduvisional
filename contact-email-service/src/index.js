@@ -12,6 +12,19 @@ const allowedOrigins = (process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIGIN 
   .split(",")
   .map((origin) => origin.trim())
   .filter(Boolean);
+const allowAllVercelPreviewOrigins = process.env.ALLOW_VERCEL_PREVIEW_ORIGINS !== "false";
+
+function isAllowedOrigin(origin) {
+  if (allowedOrigins.includes(origin)) {
+    return true;
+  }
+
+  if (allowAllVercelPreviewOrigins && /^https:\/\/[a-zA-Z0-9-]+\.vercel\.app$/.test(origin)) {
+    return true;
+  }
+
+  return false;
+}
 
 const corsOptions = {
   origin(origin, callback) {
@@ -20,7 +33,7 @@ const corsOptions = {
       return callback(null, true);
     }
 
-    if (allowedOrigins.includes(origin)) {
+    if (isAllowedOrigin(origin)) {
       return callback(null, true);
     }
 
