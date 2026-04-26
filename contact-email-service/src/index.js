@@ -7,14 +7,31 @@ dotenv.config();
 
 const app = express();
 const port = Number(process.env.PORT) || 8000;
-const allowedOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
 const startedAt = Date.now();
+const allowedOrigins = (process.env.CLIENT_ORIGINS || process.env.CLIENT_ORIGIN || "http://localhost:5173")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
-app.use(
-  cors({
-    origin: allowedOrigin,
-  }),
-);
+const corsOptions = {
+  origin(origin, callback) {
+    // Allow requests with no origin (server-to-server, curl, health checks).
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 app.use(express.json());
 
 function validateContactPayload(payload) {
