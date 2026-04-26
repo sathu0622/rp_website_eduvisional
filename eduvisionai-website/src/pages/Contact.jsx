@@ -6,9 +6,40 @@ import { COMPONENTS, TEAM_MEMBERS } from "../data/siteData";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const handle = (k, v) => setForm((f) => ({ ...f, [k]: v }));
-  const submit = () => {
-    if (form.name && form.email && form.message) setSent(true);
+
+  const submit = async () => {
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setError("Please fill in name, email, and message.");
+      return;
+    }
+
+    try {
+      setSending(true);
+      setError("");
+
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || "http://localhost:8000"}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+      if (!response.ok || !data.ok) {
+        throw new Error(data.message || "Unable to send message right now.");
+      }
+
+      setSent(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (submitError) {
+      setError(submitError.message || "Unable to send message right now.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const inputStyle = {
@@ -61,8 +92,27 @@ export default function Contact() {
               <div style={{ marginBottom: 24 }}>
                 <textarea style={{ ...inputStyle, height: 130, resize: "vertical" }} value={form.message} onChange={(e) => handle("message", e.target.value)} placeholder="Your message..." />
               </div>
-              <button onClick={submit} style={{ width: "100%", background: "linear-gradient(135deg, #1e3a6e, #1e6fba)", color: "#fff", border: "none", borderRadius: 14, padding: "14px 0", cursor: "pointer", fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 700 }}>
-                Send Message
+              {error ? (
+                <div style={{ marginBottom: 16, color: "#b42318", fontFamily: "'DM Sans', sans-serif", fontSize: 14 }}>{error}</div>
+              ) : null}
+              <button
+                onClick={submit}
+                disabled={sending}
+                style={{
+                  width: "100%",
+                  background: "linear-gradient(135deg, #1e3a6e, #1e6fba)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: 14,
+                  padding: "14px 0",
+                  cursor: sending ? "not-allowed" : "pointer",
+                  opacity: sending ? 0.75 : 1,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 16,
+                  fontWeight: 700,
+                }}
+              >
+                {sending ? "Sending..." : "Send Message"}
               </button>
             </div>
           )}
