@@ -1,3 +1,5 @@
+import member1Photo from '../assets/prasad.jpeg';
+
 export const NAV_ITEMS = [
   { label: "Home", path: "/" },
   { label: "Domain", path: "/domain" },
@@ -9,7 +11,7 @@ export const NAV_ITEMS = [
 ];
 
 export const TEAM_MEMBERS = [
-  { name: "Member 1", role: "Component 1 – Multisensory Storytelling", email: "member1@example.com", initials: "M1", photo: "https://via.placeholder.com/300x300?text=Member+1" },
+  { name: "Senevirathna B.M.P.C", role: "Component 1 – Multisensory Storytelling", email: "pcsplus23@gmail.com", initials: "M1", photo: member1Photo },
   { name: "Member 2", role: "Component 2 – Smart Summarization Engine", email: "member2@example.com", initials: "M2", photo: "https://via.placeholder.com/300x300?text=Member+2" },
   { name: "Member 3", role: "Component 3 – Braille Exam Correction", email: "member3@example.com", initials: "M3", photo: "https://via.placeholder.com/300x300?text=Member+3" },
   { name: "Member 4", role: "Component 4 – Voice QA Tutoring System", email: "member4@example.com", initials: "M4", photo: "https://via.placeholder.com/300x300?text=Member+4" },
@@ -19,7 +21,7 @@ export const SUPERVISOR = {
   name: "Dr. Supervisor Name",
   role: "Project Supervisor",
   email: "supervisor@sliit.lk",
-  photo: "https://via.placeholder.com/300x300?text=Supervisor",
+  photo: "https://media.licdn.com/dms/image/v2/C5103AQH5Q3p7YiYydA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1547093296267?e=2147483647&v=beta&t=u8lSv9XKbQoociXoY7bNrTdJuM6Zm_eDlTUiMwgny6c",
   qualification: "PhD in Computer Science"
 };
 
@@ -27,7 +29,7 @@ export const CO_SUPERVISOR = {
   name: "Asst. Prof. Co-Supervisor Name",
   role: "Project Co-Supervisor",
   email: "cosupervisor@sliit.lk",
-  photo: "https://via.placeholder.com/300x300?text=Co-Supervisor",
+  photo: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=H9k8UZwAAAAJ&citpid=1",
   qualification: "MSc in Artificial Intelligence"
 };
 
@@ -79,9 +81,9 @@ export const COMPONENTS = [
     color: "#1e6fba",
     icon: "🎧",
     summary: "AI-powered audio narratives with culturally relevant sound effects for immersive Sri Lankan history lessons.",
-    gap: "Existing tools lack culturally linked, immersive audio for visually impaired history learners. Static audio delivery misses semantic connections between historical events.",
-    problem: "Current systems fail to incorporate semantic links or audio enhancements inherent in historical narratives, limiting retention for visually impaired students.",
-    objective: "Develop an NLP-based module generating vivid audio narratives synchronized with culturally relevant sound effects (temple bells, battle sounds) tailored to Sri Lankan history.",
+    gap: "There is a clear gap between existing audio accessibility tools and the needs of visually impaired history students. Most systems focus only on basic text-to-speech, providing accessible but educationally weak audio without simplifying complex content, adjusting tone, or adding sound effects. Additionally, these tools lack domain-specific support, especially for Sri Lankan O/L history, which requires accurate explanation of cultural and historical details. Generic solutions fail to ensure proper understanding. Furthermore, the integration of NLP-based text simplification with emotional narration is limited. Combining these features is essential to improve comprehension, engagement, and learning continuity, yet this area remains insufficiently explored in current research.",
+    problem: "This research addresses the lack of a smart, curriculum-sensitive backend for Sri Lankan O/L history education for visually impaired learners. Existing tools produce monotonous audio that limits understanding and engagement. The study proposes a system that simplifies content, adds emotional context, and generates structured, engaging spoken lessons through an integrated backend architecture.",
+    objective: "To create and develop a curriculum-integrated component that translates Sri Lankan O/L history lessons into an audio lesson for visually impaired students by enhancing the text, providing support for emotional narration and generating the audio using artificial intelligence.",
     methodology: "NLP narrative generation → Cultural sound effect mapping → Dynamic delivery engine → User testing with VI students",
     literature: "Research in audio storytelling shows that multisensory experiences enhance information retention, particularly for visually impaired learners. Studies on narrative structures demonstrate that culturally relevant content significantly improves engagement and comprehension. Natural Language Processing advances have enabled automatic narration generation, while Text-to-Speech technologies have evolved to provide more expressive and natural-sounding output. Integration of sound design principles from media studies with educational technology creates immersive learning experiences tailored to specific cultural contexts.",
     tech: ["NLP", "TTS", "Audio Processing", "Python", "React Native"],
