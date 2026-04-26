@@ -9,19 +9,19 @@ export default function Documents() {
       documents: [
         {
           title: "Proposal Report - IT22232090",
-          link: "/doc/IT22232090_Project_Proposal.pdf",
+          link: "https://drive.google.com/file/d/1R4xssUap8SIQb489NQKWco4GqbfR4neb/view?usp=drive_link",
         },
         {
           title: "Proposal Report - IT22238344",
-          link: "/doc/IT22238344_Proposal_Report.pdf",
+          link: "https://drive.google.com/file/d/150QoGDsK9hQrzXuAEzF_A8tnYPa8hW-d/view?usp=drive_link",
         },
         {
           title: "Proposal Report - IT22604330",
-          link: "/doc/IT22604330_Project_Proposal.pdf",
+          link: "https://drive.google.com/file/d/1DclNKNm0BuT9gHLLMvlMXAzm8-_fjjNU/view?usp=drive_link",
         },
         {
           title: "Proposal Report - IT22219084",
-          link: "/doc/IT22219084_Project_Proposal.pdf",
+          link: "https://drive.google.com/file/d/1CS8KlSOYE45daMqYraEGC3p8o_27d-mQ/view?usp=drive_link",
         },
       ],
     },

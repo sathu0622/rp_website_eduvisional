@@ -27,18 +27,7 @@ function isAllowedOrigin(origin) {
 }
 
 const corsOptions = {
-  origin(origin, callback) {
-    // Allow requests with no origin (server-to-server, curl, health checks).
-    if (!origin) {
-      return callback(null, true);
-    }
-
-    if (isAllowedOrigin(origin)) {
-      return callback(null, true);
-    }
-
-    return callback(new Error(`CORS blocked for origin: ${origin}`));
-  },
+  origin: "*",
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
