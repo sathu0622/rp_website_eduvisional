@@ -8,6 +8,7 @@ dotenv.config();
 const app = express();
 const port = Number(process.env.PORT) || 8000;
 const allowedOrigin = process.env.CLIENT_ORIGIN || "http://localhost:5173";
+const startedAt = Date.now();
 
 app.use(
   cors({
@@ -37,9 +38,17 @@ function validateContactPayload(payload) {
   };
 }
 
-app.get("/api/health", (_req, res) => {
-  res.json({ ok: true });
-});
+function sendHealthStatus(_req, res) {
+  res.status(200).json({
+    ok: true,
+    service: "contact-email-service",
+    uptimeSeconds: Math.floor((Date.now() - startedAt) / 1000),
+    timestamp: new Date().toISOString(),
+  });
+}
+
+app.get("/health", sendHealthStatus);
+app.get("/api/health", sendHealthStatus);
 
 app.post("/api/contact", async (req, res) => {
   const result = validateContactPayload(req.body);
