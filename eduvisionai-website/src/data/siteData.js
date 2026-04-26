@@ -1,4 +1,7 @@
 import member1Photo from '../assets/prasad.jpeg';
+import member2Photo from '../assets/abi.jpeg';
+import member3Photo from '../assets/kavindya.jpeg';
+import member4Photo from '../assets/passport size photo.png';
 
 export const NAV_ITEMS = [
   { label: "Home", path: "/" },
@@ -11,26 +14,27 @@ export const NAV_ITEMS = [
 ];
 
 export const TEAM_MEMBERS = [
+
+  { name: "Sathushan T", role: "Component 2 – Smart Summarization Engine", email: "sathushan622@gmail.com", initials: "M2", photo: member4Photo },
+  { name: "Abishaan T", role: "Component 3 – Braille Exam Correction", email: "abishaan.thiyagalingam@gmail.com", initials: "M3", photo: member2Photo },
+  { name: "Dolawattage K. J", role: "Component 4 – Voice QA Tutoring System", email: "member4@example.com", initials: "M4", photo: member3Photo },
   { name: "Senevirathna B.M.P.C", role: "Component 1 – Multisensory Storytelling", email: "pcsplus23@gmail.com", initials: "M1", photo: member1Photo },
-  { name: "Member 2", role: "Component 2 – Smart Summarization Engine", email: "member2@example.com", initials: "M2", photo: "https://via.placeholder.com/300x300?text=Member+2" },
-  { name: "Member 3", role: "Component 3 – Braille Exam Correction", email: "member3@example.com", initials: "M3", photo: "https://via.placeholder.com/300x300?text=Member+3" },
-  { name: "Member 4", role: "Component 4 – Voice QA Tutoring System", email: "member4@example.com", initials: "M4", photo: "https://via.placeholder.com/300x300?text=Member+4" },
 ];
 
 export const SUPERVISOR = {
-  name: "Dr. Supervisor Name",
+  name: "Dilani Lunugalage",
   role: "Project Supervisor",
   email: "supervisor@sliit.lk",
   photo: "https://media.licdn.com/dms/image/v2/C5103AQH5Q3p7YiYydA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1547093296267?e=2147483647&v=beta&t=u8lSv9XKbQoociXoY7bNrTdJuM6Zm_eDlTUiMwgny6c",
-  qualification: "PhD in Computer Science"
+  // qualification: "PhD in Computer Science"
 };
 
 export const CO_SUPERVISOR = {
-  name: "Asst. Prof. Co-Supervisor Name",
+  name: "Kaushalya Rajapakse",
   role: "Project Co-Supervisor",
   email: "cosupervisor@sliit.lk",
   photo: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=H9k8UZwAAAAJ&citpid=1",
-  qualification: "MSc in Artificial Intelligence"
+  // qualification: "MSc in Artificial Intelligence"
 };
 
 export const MILESTONES = [

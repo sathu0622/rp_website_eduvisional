@@ -60,6 +60,10 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Contact email service running on http://localhost:${port}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Contact email service running on http://localhost:${port}`);
+  });
+}
+
+export default app;
