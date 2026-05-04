@@ -2,86 +2,75 @@ import Section from "../components/layout/Section";
 import SectionTitle from "../components/layout/SectionTitle";
 
 export default function Documents() {
-  const documentGroups = [
+const documentGroups = [
+  {
+    title: "Project Proposal",
+    color: "#0d9e6e",
+    documents: [
+      {
+        title: "Proposal Report - IT22232090",
+        link: "/doc/IT22232090_Project_Proposal.pdf",
+      },
+      {
+        title: "Proposal Report - IT22238344",
+        link: "/doc/IT22238344_Proposal_Report.pdf",
+      },
+      {
+        title: "Proposal Report - IT22604330",
+        link: "/doc/IT22604330_Project_Proposal.pdf",
+      },
+      {
+        title: "Proposal Report - IT22219084",
+        link: "/doc/IT22219084_Project_Proposal.pdf",
+      },
+    ],
+  },
+  {
+    title: "Final Reports",
+    color: "#7c3aed",
+    documents: [
+      { title: "Final Report - IT22232090", link: "/doc/final-it22232090.pdf" },
+      { title: "Final Report - IT22238344", link: "/doc/final-it22238344.pdf" },
+      { title: "Final Report - IT22604330", link: "/doc/final-it22604330.pdf" },
+      { title: "Final Report - IT22219084", link: "/doc/final-it22219084.pdf" },
+      { title: "Final Group Report", link: "/doc/final-group-report.pdf" },
+    ],
+  },
+  {
+  title: "Research Paper",
+  color: "#d4880e",
+  documents: [
     {
-      title: "Project Proposal",
-      color: "#0d9e6e",
-      documents: [
-        {
-          title: "Proposal Report - IT22232090",
-          link: "https://drive.google.com/file/d/1R4xssUap8SIQb489NQKWco4GqbfR4neb/view?usp=drive_link",
-        },
-        {
-          title: "Proposal Report - IT22238344",
-          link: "https://drive.google.com/file/d/150QoGDsK9hQrzXuAEzF_A8tnYPa8hW-d/view?usp=drive_link",
-        },
-        {
-          title: "Proposal Report - IT22604330",
-          link: "https://drive.google.com/file/d/1DclNKNm0BuT9gHLLMvlMXAzm8-_fjjNU/view?usp=drive_link",
-        },
-        {
-          title: "Proposal Report - IT22219084",
-          link: "https://drive.google.com/file/d/1CS8KlSOYE45daMqYraEGC3p8o_27d-mQ/view?usp=drive_link",
-        },
-      ],
+      title: "Research Paper 1",
+      link: "/doc/VisionAssist - A Resource-Type Aware Document Intelligence for Visually Impaired Learners.pdf",
     },
     {
-      title: "Final Reports",
-      color: "#7c3aed",
-      documents: [
-        {
-          title: "Final Report - IT22232090",
-          link: "/doc/final-it22232090.pdf",
-        },
-        {
-          title: "Final Report - IT22238344",
-          link: "/doc/final-it22238344.pdf",
-        },
-        {
-          title: "Final Report - IT22604330",
-          link: "/doc/final-it22604330.pdf",
-        },
-        {
-          title: "Final Report - IT22219084",
-          link: "/doc/final-it22219084.pdf",
-        },
-        {
-          title: "Final Group Report",
-          link: "/doc/final-group-report.pdf",
-        },
-      ],
+      title: "Research Paper 2",
+      link: "/doc/research-paper-2.pdf",
     },
-    {
-      title: "Research Paper",
-      color: "#d4880e",
-      documents: [
-        {
-          title: "Research Paper",
-          link: "/doc/research-paper.pdf",
-        },
-      ],
-    },
-    {
-      title: "Deployment Documents",
-      color: "#1e6fba",
-      documents: [
-        {
-          title: "Deployment Report",
-          link: "/doc/deployment-report.pdf",
-        },
-      ],
-    },
-    {
-      title: "Registration Docs",
-      color: "#d4880e",
-      documents: [
-        {
-          title: "Topic Assessment",
-          link: "/doc/topic-assessment.pdf",
-        },
-      ],
-    },
-  ];
+  ],
+},
+  {
+    title: "Deployment Documents",
+    color: "#1e6fba",
+    documents: [
+      {
+        title: "Deployment Report",
+        link: "/doc/25-26J-438_Deployment_Report.pdf",
+      },
+    ],
+  },
+  {
+    title: "Registration Docs",
+    color: "#d4880e",
+    documents: [
+      {
+        title: "Topic Assessment",
+        link: "/doc/topic-assessment.pdf",
+      },
+    ],
+  },
+];
 
   return (
     <Section style={{ paddingBottom: 100 }}>
