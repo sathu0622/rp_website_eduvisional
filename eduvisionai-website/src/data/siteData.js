@@ -24,7 +24,7 @@ export const TEAM_MEMBERS = [
 export const SUPERVISOR = {
   name: "Dilani Lunugalage",
   role: "Project Supervisor",
-  email: "supervisor@sliit.lk",
+  email: "dilani.l@sliit.lk",
   photo: "https://media.licdn.com/dms/image/v2/C5103AQH5Q3p7YiYydA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1547093296267?e=2147483647&v=beta&t=u8lSv9XKbQoociXoY7bNrTdJuM6Zm_eDlTUiMwgny6c",
   // qualification: "PhD in Computer Science"
 };
@@ -32,7 +32,7 @@ export const SUPERVISOR = {
 export const CO_SUPERVISOR = {
   name: "Kaushalya Rajapakse",
   role: "Project Co-Supervisor",
-  email: "cosupervisor@sliit.lk",
+  email: "kaushalya.r@sliit.lk",
   photo: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=H9k8UZwAAAAJ&citpid=1",
   // qualification: "MSc in Artificial Intelligence"
 };
