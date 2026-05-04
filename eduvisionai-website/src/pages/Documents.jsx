@@ -25,17 +25,17 @@ const documentGroups = [
       },
     ],
   },
-  {
-    title: "Final Reports",
-    color: "#7c3aed",
-    documents: [
-      { title: "Final Report - IT22232090", link: "/doc/final-it22232090.pdf" },
-      { title: "Final Report - IT22238344", link: "/doc/final-it22238344.pdf" },
-      { title: "Final Report - IT22604330", link: "/doc/final-it22604330.pdf" },
-      { title: "Final Report - IT22219084", link: "/doc/final-it22219084.pdf" },
-      { title: "Final Group Report", link: "/doc/final-group-report.pdf" },
-    ],
-  },
+  // {
+  //   title: "Final Reports",
+  //   color: "#7c3aed",
+  //   documents: [
+  //     { title: "Final Report - IT22232090", link: "/doc/final-it22232090.pdf" },
+  //     { title: "Final Report - IT22238344", link: "/doc/final-it22238344.pdf" },
+  //     { title: "Final Report - IT22604330", link: "/doc/final-it22604330.pdf" },
+  //     { title: "Final Report - IT22219084", link: "/doc/final-it22219084.pdf" },
+  //     { title: "Final Group Report", link: "/doc/final-group-report.pdf" },
+  //   ],
+  // },
   {
   title: "Research Paper",
   color: "#d4880e",
@@ -46,7 +46,7 @@ const documentGroups = [
     },
     {
       title: "Research Paper 2",
-      link: "/doc/research-paper-2.pdf",
+      link: "/doc/AI Powered Accessible Learning and Assessment Platform for Visually Impaired OL History Students in Sri Lanka.pdf",
     },
   ],
 },
@@ -66,7 +66,7 @@ const documentGroups = [
     documents: [
       {
         title: "Topic Assessment",
-        link: "/doc/topic-assessment.pdf",
+        link: "/doc/TAF_25-26J-438.pdf",
       },
     ],
   },
